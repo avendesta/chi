@@ -1,4 +1,11 @@
 steps:
+  - name: 'gcr.io/$PROJECT_ID/sonar-scanner:latest'
+    args:
+      - '-Dsonar.host.url=https://sonarcloud.io'
+      - '-Dsonar.login=$_SONAR_TOKEN'
+      - '-Dsonar.projectKey=career-crew_career-board'
+      - '-Dsonar.organization=career-crew'
+      - '-Dsonar.sources=.'
   - name: gcr.io/cloud-builders/docker
     args:
       - build
@@ -21,16 +28,7 @@ steps:
       - '--platform'
       - $_PLATFORM
     entrypoint: gcloud
-  steps:
-  - name: 'gcr.io/$PROJECT_ID/sonar-scanner:latest'
-    args:
-    - '-Dsonar.host.url=https://sonarcloud.io'
-    - '-Dsonar.login=$_SONAR_TOKEN'
-    - '-Dsonar.projectKey=career-crew_career-board'
-    - '-Dsonar.organization=career-crew'
-    - '-Dsonar.sources=.'
 
-tags: ['cloud-builders-community']
 timeout: 1200s
 images:
   - '$_AR_HOSTNAME/$PROJECT_ID/$_AR_REPO/$_SERVICE_NAME:$COMMIT_SHA'
