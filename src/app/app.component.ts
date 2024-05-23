@@ -51,6 +51,6 @@ export class AppComponent {
     ];
     this.nextFeatureUpdate = {
       date: 'Upcoming!', description: 'API Specification', 
-      detail: 'Add api specification for backend'};
+      detail: 'Add api specification for backend api'};
   }
 }

@@ -7,16 +7,17 @@
   <button mat-button (click)="accordion.closeAll()">Collapse All</button>
 </div>
 <mat-accordion class="example-headers-align" multi>
-  <mat-expansion-panel disabled>
+  <mat-expansion-panel>
     <mat-expansion-panel-header>
       <mat-panel-title>
         {{nextFeatureUpdate.date}}
       </mat-panel-title>
       <mat-panel-description>
         {{nextFeatureUpdate.description}}
-        <mat-icon>check_circle</mat-icon>
+        <mat-icon>pending</mat-icon>
       </mat-panel-description>
     </mat-expansion-panel-header>
+    <p> {{nextFeatureUpdate.detail}} </p>
   </mat-expansion-panel>
 
   <ng-container  *ngFor="for let update of pastFeatureUpdates">
