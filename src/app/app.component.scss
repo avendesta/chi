@@ -1,27 +1,18 @@
-body {
-  background-color: antiquewhite;
-  opacity: 0.5;
-}
-.header {
-  color: black;
-  font-family: monospace;
+.title_center {
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
 }
 
-section {
-  display: table;
+.example-action-buttons {
+  padding-bottom: 20px;
 }
 
-.example-button-row {
-  display: table-cell;
-  max-width: 600px;
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
 }
 
-.example-button-row .mat-mdc-button-base {
-  margin: 8px 8px 8px 0;
+.example-headers-align .mat-mdc-form-field + .mat-mdc-form-field {
+  margin-left: 8px;
 }
-
-.example-flex-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
