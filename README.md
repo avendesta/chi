@@ -1,4 +1,5 @@
 # Career Board
+![Career Board](https://github.com/career-crew/career-board-service/assets/53615807/61b0c2fb-820f-4464-b84c-c18f0fc793dd)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
 
