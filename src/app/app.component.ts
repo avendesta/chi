@@ -38,6 +38,10 @@ export class AppComponent {
   constructor(){
     this.pastFeatureUpdates = [
       {
+        date: 'May 24, 2024', description: 'Create postgres database', 
+        detail: `Connect to postgres database and create a sample table using PgAdmin`
+      },
+      {
         date: 'May 23, 2024', description: 'Add sonarqube to pipeline', 
         detail: `Sonarqube added to pipeline for both backend and frontend.`
       },
