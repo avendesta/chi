@@ -1,4 +1,4 @@
-import { NgFor, TitleCasePipe } from '@angular/common';
+import { CommonModule, NgFor, TitleCasePipe } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import {Component, ViewChild} from '@angular/core';
 import {MatAccordion, MatExpansionModule} from '@angular/material/expansion';
@@ -26,6 +26,7 @@ import { FeatureUpdate } from './interfaces/FeatureUpdate';
     MatDatepickerModule,
     MatCardModule,
     NgFor,
+    CommonModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
