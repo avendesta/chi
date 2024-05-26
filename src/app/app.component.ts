@@ -38,6 +38,10 @@ export class AppComponent {
   constructor(){
     this.pastFeatureUpdates = [
       {
+        date: 'May 25, 2024', description: 'Create endpoint to interact with database', 
+        detail: `Created a user registration endpoint and made sure the user details are correctly reflected in database`
+      },
+      {
         date: 'May 24, 2024', description: 'Create postgres database', 
         detail: `Connect to postgres database and create a sample table using PgAdmin`
       },
