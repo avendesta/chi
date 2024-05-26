@@ -1,5 +1,5 @@
 import { CommonModule, NgFor, TitleCasePipe } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import {Component, ViewChild} from '@angular/core';
 import {MatAccordion, MatExpansionModule} from '@angular/material/expansion';
 import {MatDatepickerModule} from '@angular/material/datepicker';
@@ -27,6 +27,9 @@ import { FeatureUpdate } from './interfaces/FeatureUpdate';
     MatCardModule,
     NgFor,
     CommonModule,
+    RouterLink,
+    RouterLinkActive,
+    RouterOutlet,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
