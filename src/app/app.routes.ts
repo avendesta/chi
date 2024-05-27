@@ -6,7 +6,7 @@ import { ProgressBoardComponent } from './components/progress-board/progress-boa
 
 export const routes: Routes = [
     { 
-        path: '', component: ProgressBoardComponent
+        path: '', component: HomeComponent
     },
     { 
         path: 'home', component: HomeComponent
