@@ -39,6 +39,14 @@ export class ProgressBoardComponent {
   constructor(){
     this.pastFeatureUpdates = [
       {
+        date: 'May 27, 2024', description: 'Create component /home to display posts from backend', 
+        detail: `Please visit /home to see the posts`
+      },
+      {
+        date: 'May 26, 2024', description: 'Create controllers to create user and posts', 
+        detail: `Created endpoint /api/user , /api/post to fetch and add user/posts`
+      },
+      {
         date: 'May 25, 2024', description: 'Create endpoint to interact with database', 
         detail: `Created a user registration endpoint and made sure the user details are correctly reflected in database`
       },
