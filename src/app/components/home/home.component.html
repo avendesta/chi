@@ -1,1 +1,28 @@
-<p>home works!</p>
+
+<mat-card class="title_center">
+    <mat-card-title>Post</mat-card-title>
+  </mat-card>
+  
+  <div class="example-action-buttons">
+    <button mat-button (click)="accordion.openAll()">Expand All</button>
+    <button mat-button (click)="accordion.closeAll()">Collapse All</button>
+  </div>
+  <mat-accordion class="example-headers-align" multi>
+  
+    <ng-container  *ngFor="let post of posts">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{post.postId}}
+          </mat-panel-title>
+          <mat-panel-description>
+            {{post.title}}
+            <mat-icon>check_circle</mat-icon>
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p> {{post.content}} </p>
+      </mat-expansion-panel>
+    </ng-container>
+  
+  </mat-accordion>
+  

@@ -8,7 +8,7 @@ import { Post } from './../interfaces/Post';
 })
 export class HomeService {
 
-  private baseUrl = 'http://localhost:8080/api/post';
+  private baseUrl = 'https://career-board-service-eh3shp47wq-uc.a.run.app/api/post';
 
   constructor(private http: HttpClient) { }
 
