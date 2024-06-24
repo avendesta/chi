@@ -15,6 +15,14 @@ export class ProfileComponent {
   get isLoggedIn(): boolean {
     return this.authService.isLoggedIn;
   }
+  
+  get username(): string {
+    return this.authService.username;
+  }
+
+  get email(): string {
+    return this.authService.email;
+  }
 
   logout() {
     this.authService.logout();
