@@ -1,1 +1,5 @@
 <p>profile works!</p>
+<h1>Welcome</h1>
+    <p *ngIf="isLoggedIn">You are logged in!</p>
+    <p *ngIf="!isLoggedIn">Please log in to access content.</p>
+    <button *ngIf="isLoggedIn" (click)="logout()">Logout</button>

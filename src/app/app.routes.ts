@@ -24,6 +24,6 @@ export const routes: Routes = [
         path: 'logout', component: LogoutButtonComponent
     },
     { 
-        path: 'profile', component: ProfileComponent
+        path: 'callback', component: ProfileComponent
     },
 ];
