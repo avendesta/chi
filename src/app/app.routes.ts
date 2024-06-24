@@ -6,24 +6,25 @@ import { ProgressBoardComponent } from './components/progress-board/progress-boa
 import { LoginButtonComponent } from './shared/login-button/login-button.component';
 import { LogoutButtonComponent } from './shared/logout-button/logout-button.component';
 import { ProfileComponent } from './shared/profile/profile.component';
+import { authGuard } from './auth.guard';
 
 export const routes: Routes = [
     { 
-        path: '', component: ProgressBoardComponent
+        path: '', component: ProgressBoardComponent, canActivate: [authGuard],
     },
     { 
-        path: 'home', component: HomeComponent
+        path: 'home', component: HomeComponent, canActivate: [authGuard]
     },
     { 
-        path: 'update', component: ProgressBoardComponent
+        path: 'update', component: ProgressBoardComponent, canActivate: [authGuard]
     },
     { 
         path: 'login', component: LoginButtonComponent
     },
     { 
-        path: 'logout', component: LogoutButtonComponent
+        path: 'logout', component: LogoutButtonComponent, canActivate: [authGuard]
     },
     { 
-        path: 'callback', component: ProfileComponent
+        path: 'callback', component: ProfileComponent, canActivate: [authGuard]
     },
 ];

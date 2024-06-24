@@ -1,6 +1,8 @@
 <h1>Welcome</h1>
-    <p *ngIf="isLoggedIn">You are logged in!</p>
-    <p *ngIf="isLoggedIn">Username: {{ username }}</p>
-    <p *ngIf="isLoggedIn">Email: {{ email }}</p>
-    <p *ngIf="!isLoggedIn">Please log in to access content.</p>
-    <button *ngIf="isLoggedIn" (click)="logout()">Logout</button>
+<ng-container *ngIf="isAuthenticated$ | async as isAuthenticated">
+  <p *ngIf="isAuthenticated">You are logged in!</p>
+  <p *ngIf="isAuthenticated">Username: {{ username }}</p>
+  <p *ngIf="isAuthenticated">Email: {{ email }}</p>
+  <button *ngIf="isAuthenticated" (click)="logout()">Logout</button>
+</ng-container>
+<p *ngIf="!(isAuthenticated$ | async)">Please log in to access content.</p>
